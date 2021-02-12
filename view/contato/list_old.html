@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+</head>
+<body>
+    
+    <h1>Lista de Contatos</h1>
+    <a href="/contatos/formulario?id=novo">Novo Contato</a>
+    {% for contact in contacts %}
+        <p> <a href="/contatos/formulario?id={{contact.id}}"> {{contact.name}} </a>  {{contact.phone}}  {{contact.email}}  
+        <a href="/contatos/remover/{{contact.id}}">remover</a>
+        </p>
+    {% endfor %}
+</body>
+</html>

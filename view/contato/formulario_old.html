@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+</head>
+<body>
+
+    <h1>Formulário de Contato</h1>
+    <form action="/contatos/salvar" method="POST">
+        <label>código</label><br/>
+        <input type="text" name="id" value="{{contact.id}}" readonly ><br/>
+        <label>Nome</label><br/>
+        <input type="text" name="name" value="{{contact.name}}"><br/>
+        <label>Email</label><br/>
+        <input type="email" name="email" value="{{contact.email}}" ><br/>
+        <label>Telefone</label><br/>
+        <input type="text" name="phone" value="{{contact.phone}}" ><br/>
+        <button type="submit">Salvar</button>
+    </form>
+    
+</body>
+</html>
